@@ -64,15 +64,11 @@ struct MovieListItemView: View {
             AsyncImage(
                 url: url,
                 cache: cache,
-                placeholder: spinner,
+                placeholder: ActivityIndicator(isAnimating: true, style: .medium),
                 configuration: { $0.resizable().renderingMode(.original) }
             )
         }
         .aspectRatio(contentMode: .fit)
         .frame(idealHeight: UIScreen.main.bounds.width / 2 * 3)
-    }
-    
-    private var spinner: some View {
-        ActivityIndicator(isAnimating: true, style: .medium)
     }
 }

@@ -7,14 +7,13 @@
 
 import Foundation
 import Combine
-import CryptoKit
 
 enum MoviesAPI {
     static let imageBase = URL(string: "https://image.tmdb.org/t/p/original/")!
     
     private static let baseUrlV3 = "https://api.themoviedb.org/3"
     private static let baseUrlV4 = "https://api.themoviedb.org/4"
-   
+    
     private static let agent = Agent()
     private static let token = Secrets.apiReadAccessToken.value
     
@@ -57,7 +56,7 @@ enum MoviesAPI {
         
         let request = URLComponents(url: baseUrl.appendingPathComponent("movie/\(movieDetailsRequestDTO.id)"), resolvingAgainstBaseURL: true)?
             .request
-    
+        
         guard let request = request else {
             return Fail(error: .invalidRequest).eraseToAnyPublisher()
         }

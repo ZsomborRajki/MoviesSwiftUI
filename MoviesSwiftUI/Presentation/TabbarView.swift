@@ -26,7 +26,7 @@ struct TabbarView: View {
         TabView(selection: $selectedTab) {
             MoviesTrendingView(viewModel: MoviesTrendingViewModel())
                 .tabItem {
-                    tabbarItem(text: "Tranding", image: "film")
+                    tabbarItem(text: "Trending", image: "film")
                 }
                 .tag(Tab.trending)
             
@@ -35,7 +35,6 @@ struct TabbarView: View {
                     tabbarItem(text: "Search", image: "magnifyingglass")
                 }
                 .tag(Tab.search)
-            
         }
     }
     
