@@ -92,6 +92,8 @@ extension MoviesSearchViewModel {
                 return .error(error)
             case .onMoviesLoaded(let movies):
                 return .loaded(movies)
+            case .onClear:
+                return .idle
             default:
                 return state
             }

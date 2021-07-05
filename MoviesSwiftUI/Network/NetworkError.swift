@@ -29,6 +29,8 @@ extension NetworkError: LocalizedError {
         switch self {
         case .decodingError:
             return NSLocalizedString("Decoding error", comment: "")
+        case .notConnected:
+            return NSLocalizedString("Internet connection is required", comment: "")
         default:
             return NSLocalizedString("Unknown error", comment: "")
         }

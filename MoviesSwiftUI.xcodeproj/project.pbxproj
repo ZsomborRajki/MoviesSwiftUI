@@ -182,7 +182,7 @@
 		EA6F6861267E43B900D59149 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				EAD99130269240A0001277D3 /* DataMapping */,
+				EAD99130269240A0001277D3 /* Models */,
 				EA6F6866267E43D000D59149 /* MoviesAPI.swift */,
 				EA6F6864267E43C900D59149 /* NetworkError.swift */,
 				EA6F6862267E43C500D59149 /* Agent.swift */,
@@ -275,14 +275,14 @@
 			path = MovieDetails;
 			sourceTree = "<group>";
 		};
-		EAD99130269240A0001277D3 /* DataMapping */ = {
+		EAD99130269240A0001277D3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				EAD773502691CE6100B8278F /* NetworkModel.swift */,
 				EAD99136269242DC001277D3 /* Responses */,
 				EAD99135269242D2001277D3 /* Requests */,
 			);
-			path = DataMapping;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		EAD99135269242D2001277D3 /* Requests */ = {

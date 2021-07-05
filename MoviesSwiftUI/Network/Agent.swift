@@ -57,11 +57,9 @@ private extension Agent {
         switch error {
         case is Swift.DecodingError:
             return .decodingError
-        case is URLError
-                where URLError.Code(rawValue: (error as NSError).code) == .notConnectedToInternet:
+        case let urlError as URLError where urlError.code == .notConnectedToInternet:
             return .notConnected
-        case is URLError
-                where URLError.Code(rawValue: (error as NSError).code) == .cancelled:
+        case let urlError as URLError where urlError.code == .cancelled:
             return .cancelled
         case let urlError as URLError:
             return .urlSessionFailed(urlError)
